@@ -59,16 +59,30 @@ a { color: var(--ink); }
 .intro { font-size: 1.05rem; color: #e8ddec; margin: 0 0 1rem; max-width: 46ch; }
 .portrait-note { font-size: 0.82rem; color: #b3a3bd; margin: 0; }
 
-.cards { display: flex; gap: 1.4rem; flex-wrap: wrap; margin: 0 0 2.4rem; }
+.cards { display: flex; flex-direction: column; gap: 1.1rem; margin: 0 0 2.4rem; }
 .card {
-  flex: 1; min-width: 260px; border: 1px solid var(--rule); border-radius: 12px;
+  border: 1px solid var(--rule); border-radius: 12px;
   padding: 1.6rem 1.5rem; text-decoration: none; color: var(--ink);
   background: #fff; display: flex; flex-direction: column; gap: 0.6rem;
 }
 .card:hover { border-color: var(--copper); }
 .card-eyebrow { font-family: var(--font-serif); font-size: 1.25rem; color: var(--aubergine); }
-.card-line { margin: 0; color: var(--muted); font-size: 0.98rem; }
+.card-line { margin: 0; color: var(--muted); font-size: 0.98rem; max-width: 62ch; }
 .card-go { color: var(--copper); font-size: 0.92rem; margin-top: auto; }
+
+/* One live destination, one archive. The archive card is quieter on purpose:
+   smaller, no white panel, present but not competing. */
+.card-primary { border-width: 2px; border-color: var(--iris); }
+.card-primary:hover { border-color: var(--copper); }
+.card-archive { background: transparent; padding: 1.1rem 1.5rem; }
+.card-archive .card-eyebrow { font-size: 1.05rem; }
+.card-archive .card-line { font-size: 0.92rem; }
+.card-archive .card-go { font-size: 0.88rem; }
+.card-flag {
+  font-family: var(--font-sans); font-size: 0.72rem; letter-spacing: 0.06em;
+  text-transform: uppercase; color: var(--muted); border: 1px solid var(--rule);
+  border-radius: 999px; padding: 0.15rem 0.55rem; vertical-align: 2px; margin-left: 0.4rem;
+}
 
 .about { border-top: 1px solid var(--rule); padding-top: 1.8rem; margin-bottom: 2.4rem; max-width: 62ch; }
 .about h2 { font-family: var(--font-serif); font-size: 1.4rem; color: var(--aubergine); margin: 0 0 0.8rem; }
