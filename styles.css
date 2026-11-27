@@ -59,15 +59,17 @@ a { color: var(--ink); }
 .tagline { font-style: italic; color: #c4b6e0; font-size: 1.2rem; line-height: 1.3; margin: 0 0 1rem; }
 .tagline-break { display: none; }
 .intro { font-size: 1.05rem; color: #e8ddec; margin: 0 0 1rem; max-width: 46ch; }
-.intro p { margin: 0; }
-.intro .lede { margin-bottom: 0.7rem; }
+.intro p { margin: 0 0 1em; }
+.intro p:last-child { margin-bottom: 0; }
 .portrait-note { font-size: 0.82rem; color: #b3a3bd; margin: 0; }
 
+@media (max-width: 800px) {
+  .tagline-break { display: block; }
+}
 @media (max-width: 720px) {
   .hero { padding: 1.6rem; }
   .hero-text h1 { font-size: 2.15rem; }
   .tagline { font-size: 1.08rem; }
-  .tagline-break { display: block; }
 }
 
 .cards { display: flex; flex-direction: column; gap: 1.1rem; margin: 0 0 2.4rem; }
